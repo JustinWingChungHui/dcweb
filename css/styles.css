@@ -259,7 +259,6 @@ color:#F89F9F;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
 /*background-color: #A43E89;*/
-;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background: #A43E89;
@@ -1404,3 +1403,9 @@ div.play-button {
 
 #youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
+.release {
+	margin-bottom: 25px;
+	border-bottom: #AAA;
+	border-style: solid;
+    border-width: 0px 0px 2px 0px;
+}

@@ -22,7 +22,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest('js/*.min.js'));
 });
 
-gulp.task('publish', [ 'css', 'js' ], function() {
+gulp.task('publish',function() {
   // create a new publisher using S3 options 
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property 
   var publisher = awspublish.create({
@@ -43,7 +43,7 @@ gulp.task('publish', [ 'css', 'js' ], function() {
     indexRootPath: true             // Invalidate index.html root paths (`foo/index.html` and `foo/`) (default: false) 
   }
 
-  return gulp.src(['**/*', '!node_modules/*'])
+  return gulp.src(['**/*', '!./node_modules/**'])
     .pipe(publisher.publish(headers))
     .pipe(cloudfront(cfSettings))
     .pipe(publisher.cache())

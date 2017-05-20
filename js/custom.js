@@ -51,7 +51,7 @@ var customScripts = {
                 return false;
             });
 			$("a[href='#basics']").click(function () {
-                $("html, body").animate({ scrollTop: $('#listen').offset().top - 75 }, "slow"); 
+                $("html, body").animate({ scrollTop: $('#video').offset().top - 75 }, "slow"); 
                 return false;
             });
     }, 

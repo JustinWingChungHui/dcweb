@@ -35,6 +35,12 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	font-family:36px 'Open Sans', sans-serif;
 }
+
+
+.gap {
+	margin-top: 150px;
+}
+
 .fitImage {
 	max-width: 100%;
 	vertical-align: middle;
@@ -1017,9 +1023,7 @@ padding:35px 0;
 	font-size: 1.2em;
 	text-shadow: none;
 }
-.hero-img {
-	display: none;
-}
+
 .da-slide p {
 	width: 67%;
 	top: 122px;

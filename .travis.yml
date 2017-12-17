@@ -3,8 +3,6 @@ rvm:
   - 2.2
 
 install:
-  # Install Jekyll and dependencies
-  - bundle install
     # Setup AWS CLI for deployment
   - pip install --upgrade --user awscli
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID

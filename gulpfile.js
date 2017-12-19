@@ -34,7 +34,7 @@ gulp.task('publish',function() {
 
   // define custom headers 
   var headers = {
-    'Cache-Control': 'max-age=172800, no-transform, public'
+    'Cache-Control': 'max-age=3600, no-transform, public'
   };
 
   var cfSettings = {

@@ -405,6 +405,8 @@ color:#F89F9F;
 	border-bottom: 2px solid #C092AE;
 	border-radius: 0px;
 }
+
+
 .navbar-inverse .navbar-nav > .active {
 }
 .navbar-nav > li:hover > a {
@@ -997,6 +999,21 @@ footer input.form-control{
 }
 #services{
 padding:35px 0;
+}
+
+.nav-icons {
+	height: 20px;
+}
+
+.social-nav{
+	display: inline-block !important;
+	border-bottom: 0px !important;
+}
+
+.footer-icons {
+	height: 40px;
+	margin-top: 5px;
+	margin-right: 5px;
 }
 @media (min-width: 768px) {
 	.header .navbar-brand {

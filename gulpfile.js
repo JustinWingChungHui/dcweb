@@ -1,28 +1,33 @@
 // This is the build file to minifu css, js and deploy it to AWS
 
 var gulp = require('gulp');
-var minifyCSS = require('gulp-csso');
+var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
+var pump = require('pump');
 var awspublish = require('gulp-awspublish')
 var cloudfront = require('gulp-cloudfront-invalidate-aws-publish');
 
 
 // Minify css
-gulp.task('css', function(){
+gulp.task('css', function() {
   return gulp.src('css/*.css')
-    .pipe(minifyCSS())
-    .pipe(gulp.dest('css/*.min.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
 });
 
 
 // This will minify js
-gulp.task('js', function() {
-  return gulp.src('js/*.js')    
-    .pipe(uglify())
-    .pipe(gulp.dest('js/*.min.js'));
+gulp.task('js', function (cb) {
+  pump([
+        gulp.src('js/*.js'),
+        uglify(),
+        gulp.dest('dist')
+    ],
+    cb
+  );
 });
 
-gulp.task('publish',function() {
+gulp.task('publish', [ 'css', 'js' ],function() {
   // create a new publisher using S3 options 
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property 
   var publisher = awspublish.create({

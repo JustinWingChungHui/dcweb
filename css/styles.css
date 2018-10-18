@@ -1449,3 +1449,18 @@ padding:35px 0;
 .track-listing {
 	margin-left: 16px;
 }
+
+.release_streaming_service {
+	margin-bottom: 5px;
+	margin-right: 3px;
+	border-color: #CCC;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #F5F5F5;
+}
+
+.release_streaming_service:hover {
+	border-color: #AAA;
+	background-color: #AAA;
+}

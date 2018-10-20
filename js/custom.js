@@ -47,13 +47,13 @@ var customScripts = {
         });
 		
 		$("a[href='#top']").click(function () {
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-                return false;
-            });
-			$("a[href='#basics']").click(function () {
-                $("html, body").animate({ scrollTop: $('#video').offset().top - 75 }, "slow"); 
-                return false;
-            });
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+        $("a[href='#basics']").click(function () {
+            $("html, body").animate({ scrollTop: $('#video').offset().top - 75 }, "slow"); 
+            return false;
+        });
     }, 
     bannerHeight: function () {
         var bHeight = $(".banner-container").height();

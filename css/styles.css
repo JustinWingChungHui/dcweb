@@ -1454,8 +1454,8 @@ padding:35px 0;
 	margin-bottom: 5px;
 	margin-right: 3px;
 	border-color: #CCC;
-	border-radius: 10px;
-	border-width: 1px;
+	border-radius: 5px;
+	border-width: 0px;
 	border-style: solid;
 	background-color: #F5F5F5;
 }

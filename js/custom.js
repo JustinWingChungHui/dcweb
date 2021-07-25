@@ -106,39 +106,6 @@ var customScripts = {
        		}
         }, 1000);
     },        
-	instagram: function(){
-
-        var loadButton = $('#load-more-instagram');
-
-		var feed = new Instafeed({
-			get: 'user',
-			userId: '2533861072',
-			clientId: 'dc1f563815f347a0b3efe09d7bdedf87',
-			template: '<a href="{{link}}"><img src="{{image}}" class="instagram_link"/></a>',
-			accessToken: '2533861072.1677ed0.e2547294968343c2b2ffe87873b3041c',
-			limit: 50,
-			filter: function(image) {
-				return image.tags.indexOf('duckthieves') >= 0;
-             },
-            
-             // every time we load more, run this function
-            after: function() {
-                // disable button if no more results to load
-                if (!this.hasNext()) {
-                    loadButton.hide();
-                }
-            },
-        });
-        
-        
-
-        // bind the load more button
-        loadButton.click(function() {
-            feed.next();
-        });
-
-		feed.run();
-	},
 	youtube: function() {
 		var div, n,
                 v = document.getElementsByClassName("youtube-player");
@@ -176,7 +143,6 @@ var customScripts = {
         customScripts.bannerHeight();
         customScripts.masonry();
         customScripts.navigate_land();
-		customScripts.instagram();
 		customScripts.youtube();
     }
 }

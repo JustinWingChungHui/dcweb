@@ -473,7 +473,7 @@ bottom: 0px;
 	margin-top: 70px;
 }
 .banner-content {
-	position: absolute;
+	position: relative;
 	z-index: 3;
 	top: 0px;
 	left: 0px;

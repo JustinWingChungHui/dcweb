@@ -133,6 +133,19 @@ var customScripts = {
         this.parentNode.replaceChild(iframe, this);
     },
 
+    cycleBackgrounds: function() {
+        var index = 0;
+        var images = $(".banner-container img");
+        setInterval(function() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            images.hide();
+            images.eq(index).show();
+        }, 4000); // Change image every 2 seconds
+    },
+
 
     init: function () {    
         customScripts.onePageNav();  
@@ -144,6 +157,7 @@ var customScripts = {
         customScripts.masonry();
         customScripts.navigate_land();
 		customScripts.youtube();
+        customScripts.cycleBackgrounds();
     }
 }
 $('document').ready(function () {

@@ -1479,3 +1479,34 @@ padding:35px 0;
 	border-color: #AAA;
 	background-color: #AAA;
 }
+
+.tagline {
+	position: absolute;
+	top: 250px;
+	opacity: 0.6;
+	left: 0; 
+	right: 0; 
+	margin-inline: auto; 
+	width: fit-content;
+	color: #EEE;
+	font-size: 42px;
+	text-shadow: 5px 5px 8px #111;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	text-align: center	;
+}
+
+@media (max-width: 700px) {
+	.tagline {
+		font-size: 32px;
+		top: 150px;
+	}
+}
+
+@media (max-width: 500px) {
+	.tagline {
+		font-size: 24px;
+		top: 80px;
+	}
+}
